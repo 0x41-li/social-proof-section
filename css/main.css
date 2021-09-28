@@ -23,7 +23,6 @@ body {
 
 main {
   width: 100%;
-  min-height: 100vh;
   padding: 80px 20px;
 
   display: grid;
@@ -159,6 +158,7 @@ main {
     grid-template-columns: 1fr 1fr;
     max-width: 90%;
     column-gap: 60px;
+    margin-top: 80px;
   }
 
   .intro {
@@ -202,12 +202,34 @@ main {
 
 @media screen and (min-width: 1440px) {
   main {
-    max-width: 1166px;
-    margin-top: 50px;
+    max-width: 1266px;
+    margin-top: 70px;
+  }
+
+  .ratings {
+    height: max-content;
+    row-gap: 14px;
   }
 
   .ratings__box {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content max-content;
+    justify-items: center;
+    width: 480px;
+    max-width: unset;
+    gap: 30px;
+    padding: 20px 40px;
+  }
+
+  .ratings__box:nth-child(1) {
+    margin-left: -200px;
+  }
+
+  .ratings__box:nth-child(2) {
+    margin-left: -100px;
+  }
+
+  .intro__para {
+    width: 500px;
   }
   
 }
